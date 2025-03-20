@@ -1,0 +1,25 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background shape -->
+  <rect width="32" height="32" rx="6" fill="url(#quickbill-gradient)" />
+  
+  <!-- Document lines -->
+  <rect x="8" y="8" width="16" height="1.5" rx="0.75" fill="white" />
+  <rect x="8" y="12" width="16" height="1.5" rx="0.75" fill="white" opacity="0.8" />
+  <rect x="8" y="16" width="10" height="1.5" rx="0.75" fill="white" opacity="0.6" />
+  
+  <!-- Dollar sign -->
+  <path d="M18 22C18 23.1046 17.1046 24 16 24C14.8954 24 14 23.1046 14 22C14 20.8954 14.8954 20 16 20C17.1046 20 18 20.8954 18 22Z" fill="white" />
+  <path d="M16 20V18.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
+  <path d="M16 25.5V24" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
+  
+  <!-- Check mark -->
+  <path d="M20 10L22 12L25 9" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+  
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="quickbill-gradient" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+      <stop stopColor="#4F46E5" />
+      <stop offset="1" stopColor="#06B6D4" />
+    </linearGradient>
+  </defs>
+</svg>

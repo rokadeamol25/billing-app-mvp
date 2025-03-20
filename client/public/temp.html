@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Software - Temporary Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .card {
+            background-color: #f9f9f9;
+            border-left: 4px solid #4299e1;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #4299e1;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .button:hover {
+            background-color: #3182ce;
+        }
+        .error {
+            background-color: #fed7d7;
+            border-left: 4px solid #f56565;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Billing Software MVP</h1>
+        
+        <div class="error">
+            <h3>Connection Issue</h3>
+            <p>The React development server is not running. This is a temporary page to help you navigate the application.</p>
+        </div>
+        
+        <h2>Backend Status</h2>
+        <div class="card">
+            <p>The backend server is running at <a href="http://localhost:5000" target="_blank">http://localhost:5000</a></p>
+            <p>You can test the API by visiting the root endpoint.</p>
+        </div>
+        
+        <h2>Quick Links</h2>
+        <div>
+            <a href="http://localhost:5000/api/customers" class="button" target="_blank">Customers API</a>
+            <a href="http://localhost:5000/api/products" class="button" target="_blank">Products API</a>
+            <a href="http://localhost:5000/api/invoices" class="button" target="_blank">Invoices API</a>
+            <a href="http://localhost:5000/api/dashboard/summary" class="button" target="_blank">Dashboard API</a>
+        </div>
+        
+        <h2>Troubleshooting</h2>
+        <ul>
+            <li>Make sure PostgreSQL is installed and running</li>
+            <li>Check the database credentials in server/.env</li>
+            <li>To start the React app, you need to resolve the PowerShell execution policy issue</li>
+            <li>Try running PowerShell as administrator and execute: <code>Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned</code></li>
+        </ul>
+    </div>
+</body>
+</html> 

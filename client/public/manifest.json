@@ -1,0 +1,9 @@
+{
+  "short_name": "QuickBill",
+  "name": "QuickBill",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1e2a4a",
+  "background_color": "#ffffff"
+}
