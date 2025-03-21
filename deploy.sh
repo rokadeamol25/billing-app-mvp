@@ -23,7 +23,7 @@ sudo chown -R $USER:$USER /var/www/app
 cd /var/www/app
 
 # Clone repository (replace with your actual repository URL)
-git clone https://github.com/HP/billing-software-mvp .
+git clone https://github.com/rokadeamol25/billing-app-mvp.git .
 
 # Setup database
 sudo -u postgres psql << EOF
