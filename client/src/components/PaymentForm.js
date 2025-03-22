@@ -32,7 +32,7 @@ const PaymentForm = ({ invoice, onPaymentRecorded, amountPaid = 0 }) => {
                 throw new Error(`Payment amount cannot exceed remaining balance of ${formatCurrency(remainingBalance)}`);
             }
 
-            const response = await fetch(`http://localhost:5000/api/invoices/${invoice.id}/payments`, {
+            const response = await fetch(`http://localhost:5001/api/invoices/${invoice.id}/payments`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

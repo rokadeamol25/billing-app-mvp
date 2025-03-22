@@ -59,4 +59,11 @@ router.post('/', PurchaseController.createPurchase);
  */
 router.patch('/:id/payment', PurchaseController.updatePaymentStatus);
 
-module.exports = router; 
+/**
+ * @route   DELETE /api/purchases/:id
+ * @desc    Delete a purchase
+ * @access  Public
+ */
+router.delete('/:id', PurchaseController.deletePurchase);
+
+module.exports = router;

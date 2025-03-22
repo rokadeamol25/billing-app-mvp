@@ -9,7 +9,7 @@ const Customers = () => {
   useEffect(() => {
     const fetchCustomers = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/customers');
+        const response = await fetch('http://localhost:5001/api/customers');
         if (!response.ok) {
           throw new Error('Failed to fetch customers');
         }
@@ -29,7 +29,7 @@ const Customers = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this customer?')) {
       try {
-        const response = await fetch(`http://localhost:5000/api/customers/${id}`, {
+        const response = await fetch(`http://localhost:5001/api/customers/${id}`, {
           method: 'DELETE',
         });
         

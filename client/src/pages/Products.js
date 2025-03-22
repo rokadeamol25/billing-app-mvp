@@ -11,7 +11,7 @@ const Products = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/products');
+        const response = await fetch('http://localhost:5001/api/products');
         if (!response.ok) {
           throw new Error('Failed to fetch products');
         }
@@ -31,7 +31,7 @@ const Products = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this product?')) {
       try {
-        const response = await fetch(`http://localhost:5000/api/products/${id}`, {
+        const response = await fetch(`http://localhost:5001/api/products/${id}`, {
           method: 'DELETE',
         });
         

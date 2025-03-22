@@ -30,7 +30,7 @@ const ProductForm = () => {
     // Fetch categories
     const fetchCategories = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/products/categories');
+        const response = await fetch('http://localhost:5001/api/products/categories');
         if (!response.ok) {
           throw new Error('Failed to fetch categories');
         }
@@ -49,7 +49,7 @@ const ProductForm = () => {
     if (isEditing) {
       const fetchProduct = async () => {
         try {
-          const response = await fetch(`http://localhost:5000/api/products/${id}`);
+          const response = await fetch(`http://localhost:5001/api/products/${id}`);
           if (!response.ok) {
             throw new Error('Failed to fetch product');
           }
@@ -114,8 +114,8 @@ const ProductForm = () => {
     
     try {
       const url = isEditing 
-        ? `http://localhost:5000/api/products/${id}` 
-        : 'http://localhost:5000/api/products';
+        ? `http://localhost:5001/api/products/${id}` 
+        : 'http://localhost:5001/api/products';
       
       const method = isEditing ? 'PUT' : 'POST';
       

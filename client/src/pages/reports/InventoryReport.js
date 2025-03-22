@@ -16,7 +16,7 @@ const InventoryReport = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/products/categories');
+        const response = await fetch('http://localhost:5001/api/products/categories');
         if (!response.ok) {
           throw new Error('Failed to fetch categories');
         }
@@ -38,7 +38,7 @@ const InventoryReport = () => {
         ...(filters.lowStockOnly && { lowStockOnly: 'true' })
       });
       
-      const response = await fetch(`http://localhost:5000/api/reports/inventory?${queryParams}`);
+      const response = await fetch(`http://localhost:5001/api/reports/inventory?${queryParams}`);
       if (!response.ok) {
         throw new Error('Failed to fetch inventory report');
       }
@@ -78,7 +78,7 @@ const InventoryReport = () => {
         format: 'csv'
       });
       
-      const response = await fetch(`http://localhost:5000/api/reports/inventory/export?${queryParams}`);
+      const response = await fetch(`http://localhost:5001/api/reports/inventory/export?${queryParams}`);
       if (!response.ok) {
         throw new Error('Failed to export inventory report');
       }

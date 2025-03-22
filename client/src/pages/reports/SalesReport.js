@@ -45,7 +45,7 @@ const SalesReport = () => {
     const fetchOptions = async () => {
       try {
         // Fetch customers
-        const customersResponse = await fetch('http://localhost:5000/api/customers');
+        const customersResponse = await fetch('http://localhost:5001/api/customers');
         if (!customersResponse.ok) {
           throw new Error('Failed to fetch customers');
         }
@@ -53,7 +53,7 @@ const SalesReport = () => {
         setCustomers(customersData);
         
         // Fetch products
-        const productsResponse = await fetch('http://localhost:5000/api/products');
+        const productsResponse = await fetch('http://localhost:5001/api/products');
         if (!productsResponse.ok) {
           throw new Error('Failed to fetch products');
         }
@@ -82,7 +82,7 @@ const SalesReport = () => {
         ...(filters.productId && { productId: filters.productId })
       });
       
-      const response = await fetch(`http://localhost:5000/api/reports/sales?${queryParams}`);
+      const response = await fetch(`http://localhost:5001/api/reports/sales?${queryParams}`);
       if (!response.ok) {
         throw new Error('Failed to fetch sales report');
       }
@@ -151,7 +151,7 @@ const SalesReport = () => {
         format: 'csv'
       });
       
-      const response = await fetch(`http://localhost:5000/api/reports/sales/export?${queryParams}`);
+      const response = await fetch(`http://localhost:5001/api/reports/sales/export?${queryParams}`);
       if (!response.ok) {
         throw new Error('Failed to export sales report');
       }

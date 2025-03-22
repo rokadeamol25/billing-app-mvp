@@ -27,7 +27,7 @@ const InvoiceForm = () => {
     const fetchData = async () => {
       try {
         // Fetch customers
-        const customersResponse = await fetch('http://localhost:5000/api/customers');
+        const customersResponse = await fetch('http://localhost:5001/api/customers');
         if (!customersResponse.ok) {
           throw new Error('Failed to fetch customers');
         }
@@ -35,7 +35,7 @@ const InvoiceForm = () => {
         setCustomers(Array.isArray(customersData) ? customersData : []);
         
         // Fetch products
-        const productsResponse = await fetch('http://localhost:5000/api/products');
+        const productsResponse = await fetch('http://localhost:5001/api/products');
         if (!productsResponse.ok) {
           throw new Error('Failed to fetch products');
         }
@@ -44,7 +44,7 @@ const InvoiceForm = () => {
         
         // If editing, fetch invoice details
         if (isEditing) {
-          const invoiceResponse = await fetch(`http://localhost:5000/api/invoices/${id}`);
+          const invoiceResponse = await fetch(`http://localhost:5001/api/invoices/${id}`);
           if (!invoiceResponse.ok) {
             throw new Error('Failed to fetch invoice');
           }
@@ -235,8 +235,8 @@ const InvoiceForm = () => {
     
     try {
       const url = isEditing 
-        ? `http://localhost:5000/api/invoices/${id}` 
-        : 'http://localhost:5000/api/invoices';
+        ? `http://localhost:5001/api/invoices/${id}` 
+        : 'http://localhost:5001/api/invoices';
       
       const method = isEditing ? 'PUT' : 'POST';
       

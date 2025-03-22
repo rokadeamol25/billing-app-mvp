@@ -26,7 +26,7 @@ const CustomerForm = () => {
     if (isEditing) {
       const fetchCustomer = async () => {
         try {
-          const response = await fetch(`http://localhost:5000/api/customers/${id}`);
+          const response = await fetch(`http://localhost:5001/api/customers/${id}`);
           if (!response.ok) {
             throw new Error('Failed to fetch customer');
           }
@@ -58,8 +58,8 @@ const CustomerForm = () => {
     
     try {
       const url = isEditing 
-        ? `http://localhost:5000/api/customers/${id}` 
-        : 'http://localhost:5000/api/customers';
+        ? `http://localhost:5001/api/customers/${id}` 
+        : 'http://localhost:5001/api/customers';
       
       const method = isEditing ? 'PUT' : 'POST';
       

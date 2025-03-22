@@ -40,7 +40,7 @@ const ProfitLossReport = () => {
         endDate: filters.endDate
       });
       
-      const response = await fetch(`http://localhost:5000/api/reports/profit-loss?${queryParams}`);
+      const response = await fetch(`http://localhost:5001/api/reports/profit-loss?${queryParams}`);
       
       if (!response.ok) {
         const errorText = await response.text();

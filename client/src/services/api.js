@@ -4,7 +4,7 @@ import axios from 'axios';
  * API service for making HTTP requests
  */
 const api = axios.create({
-  baseURL: process.env.NODE_ENV === 'production' ? 'http://srv762239.hstgr.cloud:8080/api' : 'http://localhost:5001/api',
+  baseURL: 'http://localhost:5001/api',
   headers: {
     'Content-Type': 'application/json'
   }

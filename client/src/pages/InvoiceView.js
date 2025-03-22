@@ -18,7 +18,7 @@ const InvoiceView = () => {
   const fetchInvoice = useCallback(async () => {
     setLoading(true);
     try {
-      const response = await fetch(`http://localhost:5000/api/invoices/${id}`);
+      const response = await fetch(`http://localhost:5001/api/invoices/${id}`);
       if (!response.ok) {
         throw new Error('Failed to fetch invoice');
       }
@@ -26,7 +26,7 @@ const InvoiceView = () => {
       setInvoice(data);
       
       // Fetch payments separately
-      const paymentsResponse = await fetch(`http://localhost:5000/api/invoices/${id}/payment-history`);
+      const paymentsResponse = await fetch(`http://localhost:5001/api/invoices/${id}/payment-history`);
       if (paymentsResponse.ok) {
         const paymentsData = await paymentsResponse.json();
         setPayments(paymentsData.data?.payments || []);
@@ -57,7 +57,7 @@ const InvoiceView = () => {
 
   const handleDownloadPDF = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/invoices/${id}/pdf`, {
+      const response = await fetch(`http://localhost:5001/api/invoices/${id}/pdf`, {
         method: 'GET',
         headers: {
           'Accept': 'application/pdf',
@@ -85,7 +85,7 @@ const InvoiceView = () => {
 
   const handleSendEmail = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/invoices/${id}/email`, {
+      const response = await fetch(`http://localhost:5001/api/invoices/${id}/email`, {
         method: 'POST',
       });
       

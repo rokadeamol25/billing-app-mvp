@@ -15,7 +15,7 @@ const Categories = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/products/categories');
+      const response = await fetch('http://localhost:5001/api/products/categories');
       if (!response.ok) {
         throw new Error('Failed to fetch categories');
       }
@@ -67,7 +67,7 @@ const Categories = () => {
     try {
       if (editingCategory) {
         // Update existing category
-        const response = await fetch(`http://localhost:5000/api/products/categories/${editingCategory.id}`, {
+        const response = await fetch(`http://localhost:5001/api/products/categories/${editingCategory.id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -87,7 +87,7 @@ const Categories = () => {
         setEditingCategory(null);
       } else {
         // Create new category
-        const response = await fetch('http://localhost:5000/api/products/categories', {
+        const response = await fetch('http://localhost:5001/api/products/categories', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -125,7 +125,7 @@ const Categories = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this category?')) {
       try {
-        const response = await fetch(`http://localhost:5000/api/products/categories/${id}`, {
+        const response = await fetch(`http://localhost:5001/api/products/categories/${id}`, {
           method: 'DELETE',
         });
         
